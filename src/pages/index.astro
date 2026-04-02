@@ -1,5 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const articles = [
+  {
+    slug: "elevenlabs",
+    title: "ElevenLabs Review 2026: Best AI Voice Generator?",
+    description: "We tested ElevenLabs for 2 weeks — voice cloning, text-to-speech, multilingual support. Here's our honest verdict.",
+    tag: "Voice & TTS",
+    score: "9.1/10",
+    date: "Apr 2, 2026"
+  },
+  {
+    slug: "writesonic",
+    title: "Writesonic Review 2026: AI Content Writer Worth It?",
+    description: "Honest Writesonic review — features, pricing, GPT-4 quality, and whether it beats Jasper and Copy.ai.",
+    tag: "AI Writing",
+    score: "8.0/10",
+    date: "Apr 2, 2026"
+  },
+  {
+    slug: "copy-ai",
+    title: "Copy.ai Review 2026: Is It the Best AI Writing Tool?",
+    description: "In-depth Copy.ai review after 2 weeks of testing. Features, pricing, pros & cons, and whether it's worth it.",
+    tag: "AI Writing",
+    score: "8.2/10",
+    date: "Apr 2, 2026"
+  }
+];
 ---
 
 <Layout
@@ -15,8 +42,24 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="section">
-    <div class="container center">
-      <p class="empty-text">New reviews coming soon. Stay tuned.</p>
+    <div class="container">
+      <h2 class="section-title">Latest Reviews</h2>
+      <div class="grid">
+        {articles.map(article => (
+          <a href={`/reviews/${article.slug}`} class="card">
+            <span class="tag">{article.tag}</span>
+            <h3>{article.title}</h3>
+            <p>{article.description}</p>
+            <div class="card-meta">
+              <span>{article.date}</span>
+              <span class="score">{article.score}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="section-cta">
+        <a href="/tools" class="btn btn-outline">View All Reviews →</a>
+      </div>
     </div>
   </section>
 
