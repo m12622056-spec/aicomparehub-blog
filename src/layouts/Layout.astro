@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+}
+
+const { title, description, canonical, ogType = 'website' } = Astro.props;
+const url = canonical || Astro.url.href;
+const siteName = 'AI Compare Hub';
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={url}>
+  <link rel="alternate" hreflang="en" href={url}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={url}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content={siteName}>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content={url}>
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">⚡ AI Compare Hub</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class:list={["nav-link", { active: Astro.url.pathname === '/' }]}>Home</a>
+        <a href="/tools" class:list={["nav-link", { active: Astro.url.pathname === '/tools/' }]}>Tools</a>
+        <a href="/comparisons" class:list={["nav-link", { active: Astro.url.pathname === '/comparisons/' }]}>Compare</a>
+        <a href="/deals" class:list={["nav-link", { active: Astro.url.pathname === '/deals/' }]}>Deals</a>
+        <a href="/about" class:list={["nav-link", { active: Astro.url.pathname === '/about/' }]}>About</a>
+      </nav>
+      <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/about">About</a>
+        <a href="/tools">Tools</a>
+        <a href="/comparisons">Compare</a>
+        <a href="/deals">Deals</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/sitemap-index.xml">Sitemap</a>
+      </nav>
+      <p class="footer-copy">© 2026 {siteName} · <a href="/about">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-btn')?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+<style>
+  @import '../styles/global.css';
+</style>

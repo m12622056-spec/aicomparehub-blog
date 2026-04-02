@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="AI Tool Deals — AI Compare Hub"
+  description="Exclusive discounts and deals on the best AI tools. Save money on AI writing, design, and productivity tools. Updated weekly."
+>
+  <section class="article">
+    <h1>Deals</h1>
+    <p class="excerpt">Exclusive discounts on the best AI tools. Updated weekly.</p>
+    <p class="empty-text">No active deals right now. Subscribe to get notified.</p>
+    <p>Not sure which tool to grab? Start with our <a href="/tools">tool reviews</a> or see <a href="/comparisons">side-by-side comparisons</a>.</p>
+  </section>
+</Layout>
+
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AI Tool Deals",
+  "url": "https://aicomparehub.blog/deals",
+  "description": "Exclusive discounts and deals on the best AI tools. Updated weekly.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Compare Hub",
+    "url": "https://aicomparehub.blog/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicomparehub.blog/"},
+      {"@type": "ListItem", "position": 2, "name": "Deals", "item": "https://aicomparehub.blog/deals"}
+    ]
+  }
+}
+</script>

@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About — AI Compare Hub"
+  description="Learn how AI Compare Hub reviews AI tools. Hands-on testing, no paid reviews, updated quarterly. Find out our review methodology."
+>
+  <article class="article">
+    <h1>About</h1>
+    <div class="excerpt">
+      <p>AI Compare Hub is a blog dedicated to testing and reviewing AI tools so you don't have to waste time and money on the wrong ones.</p>
+    </div>
+
+    <h2>How We Review</h2>
+    <ul>
+      <li>Hands-on testing — we use every tool for at least 2 weeks</li>
+      <li>No paid reviews — if it's bad, we'll say so</li>
+      <li>Updated quarterly as tools evolve</li>
+    </ul>
+
+    <h2>Affiliate Disclosure</h2>
+    <p>Some links are affiliate links. If you buy through them, we may earn a commission at no extra cost to you. We only recommend tools we've tested and believe in.</p>
+
+    <h2>Contact</h2>
+    <p>📧 hello@aicomparehub.blog</p>
+
+    <p>Ready to explore? Browse our <a href="/tools">AI tool reviews</a>, see <a href="/comparisons">side-by-side comparisons</a>, or check out this week's <a href="/deals">deals</a>.</p>
+  </article>
+</Layout>
+
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About AI Compare Hub",
+  "url": "https://aicomparehub.blog/about",
+  "description": "Learn how AI Compare Hub reviews AI tools. Hands-on testing, no paid reviews.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Compare Hub",
+    "url": "https://aicomparehub.blog/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicomparehub.blog/"},
+      {"@type": "ListItem", "position": 2, "name": "About", "item": "https://aicomparehub.blog/about"}
+    ]
+  }
+}
+</script>

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="AI Tool Comparisons — AI Compare Hub"
+  description="Side-by-side AI tool comparisons. Compare features, pricing, and performance to find the right AI tool for your needs."
+>
+  <section class="article">
+    <h1>Comparisons</h1>
+    <p class="excerpt">Side-by-side breakdowns so you can pick the right tool fast.</p>
+    <p class="empty-text">Comparisons coming soon.</p>
+    <p>Want to explore individual tools first? Browse our <a href="/tools">full tool reviews</a> or check out this week's <a href="/deals">deals</a>.</p>
+  </section>
+</Layout>
+
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AI Tool Comparisons",
+  "url": "https://aicomparehub.blog/comparisons",
+  "description": "Side-by-side AI tool comparisons. Compare features, pricing, and performance.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Compare Hub",
+    "url": "https://aicomparehub.blog/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicomparehub.blog/"},
+      {"@type": "ListItem", "position": 2, "name": "Comparisons", "item": "https://aicomparehub.blog/comparisons"}
+    ]
+  }
+}
+</script>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="AI Compare Hub — Best AI Tools Reviewed"
+  description="Honest reviews and comparisons of the best AI tools. Find the perfect AI tool for your workflow."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Find the Best AI Tools,<br><span class="accent">Without the Hype.</span></h1>
+      <p>Real reviews. Side-by-side <a href="/comparisons">comparisons</a>. No fluff.</p>
+      <a href="/tools" class="btn">Browse Tools →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container center">
+      <p class="empty-text">New reviews coming soon. Stay tuned.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container center">
+      <div class="newsletter">
+        <h2>Get notified when we publish</h2>
+        <p>No spam. Just honest AI tool reviews.</p>
+        <form class="newsletter-form">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Subscribed! 🎉');
+    (e.target as HTMLFormElement).reset();
+  });
+</script>
+
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Compare Hub",
+  "url": "https://aicomparehub.blog/",
+  "description": "Honest reviews and comparisons of the best AI tools.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Compare Hub",
+    "url": "https://aicomparehub.blog/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://aicomparehub.blog/favicon.svg"
+    }
+  }
+}
+</script>
