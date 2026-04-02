@@ -10,6 +10,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "speechify",
+    title: "Speechify Review 2026: Turn Any Text Into Audio",
+    description: "We tested Speechify for 2 weeks — natural AI voices, voice cloning, audiobook creation.",
+    tag: "Voice & TTS",
+    score: "8.8/10",
+    date: "Apr 2, 2026",
+    toolUrl: "https://speechify.com/affiliates/"
+  },
+  {
     slug: "synthesia",
     title: "Synthesia Review 2026: Create Videos Without Cameras",
     description: "We tested Synthesia for 2 weeks — AI avatars, multilingual support, corporate training videos.",
