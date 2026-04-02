@@ -10,6 +10,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "synthesia",
+    title: "Synthesia Review 2026: Create Videos Without Cameras",
+    description: "We tested Synthesia for 2 weeks — AI avatars, multilingual support, corporate training videos.",
+    tag: "Video & Avatar",
+    score: "8.5/10",
+    date: "Apr 2, 2026",
+    toolUrl: "https://synthesia.io"
+  },
+  {
     slug: "elevenlabs",
     title: "ElevenLabs Review 2026: Best AI Voice Generator?",
     description: "We tested ElevenLabs for 2 weeks — voice cloning, text-to-speech, multilingual support.",
