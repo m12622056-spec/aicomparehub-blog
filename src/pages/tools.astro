@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { articles } from '../data/articles';
 ---
 
 <Layout
@@ -9,7 +10,22 @@ import Layout from '../layouts/Layout.astro';
   <section class="article">
     <h1>AI Tools</h1>
     <p class="excerpt">Every tool we've tested and reviewed. Honest ratings, no bias.</p>
-    <p class="empty-text">Reviews coming soon.</p>
+
+    <div class="grid">
+      {articles.map(article => (
+        <a href={`/reviews/${article.slug}`} class="card">
+          <span class="tag">{article.tag}</span>
+          <h3>{article.title}</h3>
+          <p>{article.description}</p>
+          <div class="card-meta">
+            <span>{article.date}</span>
+            <span class="score">{article.score}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <p class="more-coming">More reviews coming soon.</p>
     <p>Looking for head-to-head matchups? Check out our <a href="/comparisons">comparisons</a> or browse <a href="/deals">exclusive deals</a>.</p>
   </section>
 </Layout>
