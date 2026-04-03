@@ -10,6 +10,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "canva",
+    title: "Canva Review 2026: Design Everything Without Design Skills",
+    description: "We tested Canva's AI features for 2 weeks — Magic Design, AI image generator, background remover.",
+    tag: "Design & Graphics",
+    score: "9.0/10",
+    date: "Apr 2, 2026",
+    toolUrl: "https://www.canva.com"
+  },
+  {
     slug: "speechify",
     title: "Speechify Review 2026: Turn Any Text Into Audio",
     description: "We tested Speechify for 2 weeks — natural AI voices, voice cloning, audiobook creation.",
